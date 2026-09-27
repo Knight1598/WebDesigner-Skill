@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "webdesigner",
+  "displayName": "WebDesigner",
+  "version": "1.1.0",
+  "description": "Design-first AI skill that turns a plain-language website idea into an original, responsive, interaction-ready frontend and locks the approved design for backend handoff.",
+  "author": { "name": "IAHCARUS", "url": "https://github.com/Knight1598" },
+  "homepage": "https://github.com/Knight1598/WebDesigner-Skill",
+  "repository": "https://github.com/Knight1598/WebDesigner-Skill",
+  "license": "LicenseRef-WebDesigner-Pending",
+  "keywords": ["web-design", "ui", "ux", "frontend", "prototype", "responsive", "thai", "handoff"]
+}

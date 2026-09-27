@@ -1,0 +1,51 @@
+schema: webfactory/actions@1
+design_version: 1
+actions:
+  - action_id: toggle_mobile_nav
+    kind: frontend
+    element: 'ปุ่ม "เมนู" บนแถบบน (มือถือ) — web/index.html header'
+    trigger: click
+    purpose: "เปิด/ปิดเมนูบนมือถือ"
+    input: []
+    expected_result: "แสดงหรือซ่อนลิงก์เมนูหลัก"
+    requires_backend: false
+    success_state: "เมนูเลื่อนลงใต้แถบบน, aria-expanded=true"
+    error_state: n/a
+
+  - action_id: filter_menu
+    kind: frontend
+    element: "แท็บ ทั้งหมด/นึ่ง/ทอง ๆ — web/index.html #menu"
+    trigger: click
+    purpose: "ดูขนมเฉพาะหมวด"
+    input: []
+    expected_result: "กรองรายการขนมจาก MOCK_MENU ในเครื่อง"
+    requires_backend: false
+    success_state: "รายการเปลี่ยนทันที"
+    error_state: "ถ้าไม่มีรายการ: 'วันนี้หมวดนี้หมดแล้ว'"
+
+  - action_id: open_preorder
+    kind: frontend
+    element: 'ปุ่ม "สั่งจองล่วงหน้า" — hero'
+    trigger: click
+    purpose: "อยากสั่งจองขนมไว้ก่อนมารับ"
+    input: []
+    expected_result: "เปิด modal ฟอร์มสั่งจอง"
+    requires_backend: false
+    success_state: "modal เปิด โฟกัสที่ช่องชื่อ"
+    error_state: n/a
+
+  - action_id: submit_preorder
+    kind: backend
+    element: "ฟอร์มใน modal สั่งจอง"
+    trigger: submit
+    purpose: "ส่งคำสั่งจองขนมให้ร้าน"
+    input:
+      - { name: name, type: string, required: true }
+      - { name: phone, type: tel, required: true }
+      - { name: pickup_date, type: date, required: true }
+      - { name: items, type: text, required: true }
+    expected_result: "บันทึกคำสั่งจองและแจ้งร้าน"
+    requires_backend: true
+    success_state: "ข้อความยืนยันใต้ปุ่ม พร้อมชื่อและวันที่มารับ"
+    error_state: "ข้อความสีแดง 'ส่งไม่สำเร็จ…' ใต้ปุ่ม"
+    mock: "app.js submit_preorder หน่วง 900ms; ติ๊ก 'โหมดทดสอบ' เพื่อดู error"

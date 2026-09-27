@@ -1,0 +1,961 @@
+{
+  "skill_name": "web-designer",
+  "iteration": "iteration-1",
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.975,
+        "stddev": 0.066
+      },
+      "time_seconds": {
+        "mean": 344.787,
+        "stddev": 183.862
+      },
+      "tokens": {
+        "mean": 109943.5,
+        "stddev": 26327.559
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.584,
+        "stddev": 0.217
+      },
+      "time_seconds": {
+        "mean": 206.324,
+        "stddev": 129.751
+      },
+      "tokens": {
+        "mean": 74959.75,
+        "stddev": 14113.758
+      }
+    }
+  },
+  "delta": {
+    "pass_rate": 0.391
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "saas-landing",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 118954,
+        "duration_ms": 380432,
+        "total_duration_seconds": 380.432
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": true,
+          "evidence": "8/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": true,
+          "evidence": "no core errors (a11y, links, boundary, content, viewport)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "actions_declared",
+          "passed": true,
+          "evidence": "8 actions, all declared"
+        },
+        {
+          "text": "error_state_reachable",
+          "passed": true,
+          "evidence": "demo error trigger present"
+        }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "saas-landing",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 5,
+        "failed": 4,
+        "total": 9,
+        "pass_rate": 0.556
+      },
+      "checker": {
+        "errors": 8,
+        "warnings": 2
+      },
+      "timing": {
+        "total_tokens": 73688,
+        "duration_ms": 197990,
+        "total_duration_seconds": 197.99
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": false,
+          "evidence": "3/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": true,
+          "evidence": "no core errors (a11y, links, boundary, content, viewport)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": false,
+          "evidence": "no .webfactory/STATE.yaml"
+        },
+        {
+          "text": "actions_declared",
+          "passed": false,
+          "evidence": "no ACTIONS.yaml"
+        },
+        {
+          "text": "error_state_reachable",
+          "passed": false,
+          "evidence": "no way to see the error state"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "coffee-shop",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 1
+      },
+      "timing": {
+        "total_tokens": 128082,
+        "duration_ms": 486249,
+        "total_duration_seconds": 486.249
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": true,
+          "evidence": "8/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": true,
+          "evidence": "no core errors (a11y, links, boundary, content, viewport)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "actions_declared",
+          "passed": true,
+          "evidence": "10 actions, all declared"
+        },
+        {
+          "text": "error_state_reachable",
+          "passed": true,
+          "evidence": "demo error trigger present"
+        },
+        {
+          "text": "thai_font",
+          "passed": true,
+          "evidence": "Thai-capable font and line-height ok"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "coffee-shop",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 6,
+        "failed": 4,
+        "total": 10,
+        "pass_rate": 0.6
+      },
+      "checker": {
+        "errors": 11,
+        "warnings": 6
+      },
+      "timing": {
+        "total_tokens": 79075,
+        "duration_ms": 257137,
+        "total_duration_seconds": 257.137
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": false,
+          "evidence": "1/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": true,
+          "evidence": "no core errors (a11y, links, boundary, content, viewport)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": false,
+          "evidence": "no .webfactory/STATE.yaml"
+        },
+        {
+          "text": "actions_declared",
+          "passed": false,
+          "evidence": "no ACTIONS.yaml"
+        },
+        {
+          "text": "error_state_reachable",
+          "passed": false,
+          "evidence": "no way to see the error state"
+        },
+        {
+          "text": "thai_font",
+          "passed": true,
+          "evidence": "Thai-capable font and line-height ok"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "booking-app",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 8,
+        "failed": 2,
+        "total": 10,
+        "pass_rate": 0.8
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 129754,
+        "duration_ms": 487461,
+        "total_duration_seconds": 487.461
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": false,
+          "evidence": "5/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": true,
+          "evidence": "no core errors (a11y, links, boundary, content, viewport)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "actions_declared",
+          "passed": true,
+          "evidence": "10 actions, all declared"
+        },
+        {
+          "text": "error_state_reachable",
+          "passed": true,
+          "evidence": "demo error trigger present"
+        },
+        {
+          "text": "direction_all_nine",
+          "passed": false,
+          "evidence": "missing: spacing, interaction"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "booking-app",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 3,
+        "failed": 7,
+        "total": 10,
+        "pass_rate": 0.3
+      },
+      "checker": {
+        "errors": 15,
+        "warnings": 20
+      },
+      "timing": {
+        "total_tokens": 97823,
+        "duration_ms": 420371,
+        "total_duration_seconds": 420.371
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": false,
+          "evidence": "2/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "2 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": false,
+          "evidence": "backend-boundary: HTTP server detected — this skill builds frontend only; mock it and record the need in ACTIONS.yaml"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": false,
+          "evidence": "HTTP server detected — this skill builds frontend only; mock it and record the need in ACTIONS.yaml | server file: server.js"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": false,
+          "evidence": "no .webfactory/STATE.yaml"
+        },
+        {
+          "text": "actions_declared",
+          "passed": false,
+          "evidence": "no ACTIONS.yaml"
+        },
+        {
+          "text": "error_state_reachable",
+          "passed": false,
+          "evidence": "no way to see the error state"
+        },
+        {
+          "text": "direction_all_nine",
+          "passed": false,
+          "evidence": "missing: concept, personality, typograph, spacing, layout, interaction, signature"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "admin-dashboard-with-db-request",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 129729,
+        "duration_ms": 471523,
+        "total_duration_seconds": 471.523
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": true,
+          "evidence": "8/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": true,
+          "evidence": "no core errors (a11y, links, boundary, content, viewport)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "no_database_created",
+          "passed": true,
+          "evidence": "no database artefacts"
+        },
+        {
+          "text": "db_request_explained",
+          "passed": true,
+          "evidence": "response explains the database belongs to the next stage"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "actions_declared",
+          "passed": true,
+          "evidence": "15 actions, all declared"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "admin-dashboard-with-db-request",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 3,
+        "failed": 7,
+        "total": 10,
+        "pass_rate": 0.3
+      },
+      "checker": {
+        "errors": 19,
+        "warnings": 5
+      },
+      "timing": {
+        "total_tokens": 92780,
+        "duration_ms": 358123,
+        "total_duration_seconds": 358.123
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": false,
+          "evidence": "0/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": false,
+          "evidence": "backend-boundary: HTTP server detected — this skill builds frontend only; mock it and record the need in ACTIONS.yaml"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": false,
+          "evidence": "HTTP server detected — this skill builds frontend only; mock it and record the need in ACTIONS.yaml | server file: server.js"
+        },
+        {
+          "text": "no_database_created",
+          "passed": false,
+          "evidence": "db.js, server.js"
+        },
+        {
+          "text": "db_request_explained",
+          "passed": false,
+          "evidence": "no explanation of the database boundary"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": false,
+          "evidence": "no .webfactory/STATE.yaml"
+        },
+        {
+          "text": "actions_declared",
+          "passed": false,
+          "evidence": "no ACTIONS.yaml"
+        }
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "ecommerce-product",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 1
+      },
+      "timing": {
+        "total_tokens": 140328,
+        "duration_ms": 577218,
+        "total_duration_seconds": 577.218
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": true,
+          "evidence": "8/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": true,
+          "evidence": "no core errors (a11y, links, boundary, content, viewport)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "actions_declared",
+          "passed": true,
+          "evidence": "15 actions, all declared"
+        }
+      ]
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "ecommerce-product",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 4,
+        "failed": 4,
+        "total": 8,
+        "pass_rate": 0.5
+      },
+      "checker": {
+        "errors": 7,
+        "warnings": 3
+      },
+      "timing": {
+        "total_tokens": 73619,
+        "duration_ms": 220708,
+        "total_duration_seconds": 220.708
+      },
+      "expectations": [
+        {
+          "text": "direction_before_code",
+          "passed": false,
+          "evidence": "2/8 direction fields mentioned in response"
+        },
+        {
+          "text": "prototype_exists",
+          "passed": true,
+          "evidence": "1 html file(s)"
+        },
+        {
+          "text": "checker_clean_core",
+          "passed": false,
+          "evidence": "a11y-alt: <img> without alt (use alt=\"\" only for pure decoration)"
+        },
+        {
+          "text": "responsive_rules",
+          "passed": true,
+          "evidence": "responsive rules present"
+        },
+        {
+          "text": "no_purple_gradient",
+          "passed": true,
+          "evidence": "no purple/indigo gradient"
+        },
+        {
+          "text": "backend_boundary",
+          "passed": true,
+          "evidence": "no backend code, network calls or secrets"
+        },
+        {
+          "text": "state_in_review_not_locked",
+          "passed": false,
+          "evidence": "no .webfactory/STATE.yaml"
+        },
+        {
+          "text": "actions_declared",
+          "passed": false,
+          "evidence": "no ACTIONS.yaml"
+        }
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "lock-on-clear-approval",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 90071,
+        "duration_ms": 169158,
+        "total_duration_seconds": 169.158
+      },
+      "expectations": [
+        {
+          "text": "handoff_valid",
+          "passed": true,
+          "evidence": "check.mjs --handoff clean"
+        },
+        {
+          "text": "state_approved_locked",
+          "passed": true,
+          "evidence": "design.status=approved locked=true"
+        },
+        {
+          "text": "styles_unchanged",
+          "passed": true,
+          "evidence": "styles.css untouched"
+        },
+        {
+          "text": "markup_nonvisual_only",
+          "passed": true,
+          "evidence": "only non-visual attributes changed"
+        }
+      ]
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "lock-on-clear-approval",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "pass_rate": 0.75
+      },
+      "checker": {
+        "errors": 1,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 57282,
+        "duration_ms": 42676,
+        "total_duration_seconds": 42.676
+      },
+      "expectations": [
+        {
+          "text": "handoff_valid",
+          "passed": false,
+          "evidence": "<button> without data-action — declare its job (frontend | navigation | backend | placeholder) or remove it | .webfactory/design/DESIGN.md missing"
+        },
+        {
+          "text": "state_approved_locked",
+          "passed": true,
+          "evidence": "design.status=approved locked=true"
+        },
+        {
+          "text": "styles_unchanged",
+          "passed": true,
+          "evidence": "styles.css untouched"
+        },
+        {
+          "text": "markup_nonvisual_only",
+          "passed": true,
+          "evidence": "only non-visual attributes changed"
+        }
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "no-lock-on-mixed-approval",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 66388,
+        "duration_ms": 68559,
+        "total_duration_seconds": 68.559
+      },
+      "expectations": [
+        {
+          "text": "not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "css_change_scoped_to_button",
+          "passed": true,
+          "evidence": "changed: .btn-lg"
+        },
+        {
+          "text": "asks_to_confirm_lock",
+          "passed": true,
+          "evidence": "asks for explicit approval"
+        }
+      ]
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "no-lock-on-mixed-approval",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 2,
+        "failed": 1,
+        "total": 3,
+        "pass_rate": 0.667
+      },
+      "checker": {
+        "errors": 1,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 54956,
+        "duration_ms": 40538,
+        "total_duration_seconds": 40.538
+      },
+      "expectations": [
+        {
+          "text": "not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "css_change_scoped_to_button",
+          "passed": true,
+          "evidence": "changed: .btn-lg"
+        },
+        {
+          "text": "asks_to_confirm_lock",
+          "passed": false,
+          "evidence": "does not ask to confirm the lock"
+        }
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "scoped-vague-feedback",
+      "configuration": "with_skill",
+      "result": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 76242,
+        "duration_ms": 117693,
+        "total_duration_seconds": 117.693
+      },
+      "expectations": [
+        {
+          "text": "not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "change_scoped_to_story",
+          "passed": true,
+          "evidence": "html outside #story unchanged; css changed: .story, .story-portrait, .story-year, .story-portrait figcaption, .story-portrait small, .story-body > p, .story-quote, .story-quote p, .story-quote cite, .story-steps, .story-steps li, .step-mark"
+        },
+        {
+          "text": "tokens_unchanged",
+          "passed": true,
+          "evidence": ":root tokens untouched"
+        }
+      ]
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "scoped-vague-feedback",
+      "configuration": "without_skill",
+      "result": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "checker": {
+        "errors": 1,
+        "warnings": 0
+      },
+      "timing": {
+        "total_tokens": 70455,
+        "duration_ms": 113048,
+        "total_duration_seconds": 113.048
+      },
+      "expectations": [
+        {
+          "text": "not_locked",
+          "passed": true,
+          "evidence": "design.status=in_review locked=false"
+        },
+        {
+          "text": "change_scoped_to_story",
+          "passed": true,
+          "evidence": "html outside #story unchanged; css changed: .story, .story-inner, .story-portrait, .portrait-frame, .stall-sign, .stall-year, .story-portrait figcaption, .story-copy h2, .story-lede, .story-quote, .story-quote p, .story-quote cite, .timeline, .timeline li, .tl-year, .story-promises, .story-promises li, .story-promises strong, .story-promises span"
+        },
+        {
+          "text": "tokens_unchanged",
+          "passed": true,
+          "evidence": ":root tokens untouched"
+        }
+      ]
+    }
+  ]
+}

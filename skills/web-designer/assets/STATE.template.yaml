@@ -1,0 +1,27 @@
+schema: webfactory/state@1
+project:
+  name: "<project name>"
+  stage: design            # design | contract | backend | integration | qa | deploy
+  updated: "YYYY-MM-DD"
+design:
+  status: in_progress      # in_progress | in_review | approved | revision_in_progress
+  locked: false            # true once approved; downstream skills must not change visuals
+  version: 1
+  approved_at: null        # "YYYY-MM-DD" when approved
+  approval_quote: null     # the user's exact approving words
+  skill: web-designer@1.1.0
+frontend:
+  status: in_progress      # in_progress | prototype_complete
+  path: web/
+  entry: web/index.html
+  stack: static-html-css-js
+contract:
+  status: pending
+backend:
+  status: pending
+integration:
+  status: pending
+qa:
+  status: pending
+deploy:
+  status: pending

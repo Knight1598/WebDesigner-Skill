@@ -1,0 +1,27 @@
+schema: webfactory/state@1
+project:
+  name: "บ้านขนมป้านวล"
+  stage: design
+  updated: "2026-09-26"
+design:
+  status: in_review
+  locked: false
+  version: 1
+  approved_at: null
+  approval_quote: null
+  skill: web-designer@1.0.0
+frontend:
+  status: prototype_complete
+  path: web/
+  entry: web/index.html
+  stack: static-html-css-js
+contract:
+  status: pending
+backend:
+  status: pending
+integration:
+  status: pending
+qa:
+  status: pending
+deploy:
+  status: pending

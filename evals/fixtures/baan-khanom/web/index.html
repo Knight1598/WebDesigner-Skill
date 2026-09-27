@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>บ้านขนมป้านวล — ขนมไทยอบสดทุกเช้า</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Trirong:wght@600;700&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top">บ้านขนมป้านวล</a>
+    <nav class="nav" id="site-nav" aria-label="เมนูหลัก">
+      <a href="#menu">ขนมวันนี้</a>
+      <a href="#story">เรื่องของป้า</a>
+      <a href="#visit">มาหาเรา</a>
+    </nav>
+    <button class="nav-toggle" data-action="toggle_mobile_nav" aria-expanded="false" aria-controls="site-nav">เมนู</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ตลาดพลู · เปิด 06:00–13:00</p>
+        <h1>ขนมไทย<br>ออกจากเตา<br><em>ทุกเช้า</em></h1>
+        <p class="lede">สูตรของป้านวลตั้งแต่ปี 2528 ทำวันต่อวัน หมดแล้วหมดเลย สั่งจองล่วงหน้าได้ รับที่หน้าร้าน</p>
+        <button class="btn btn-primary" data-action="open_preorder">สั่งจองล่วงหน้า</button>
+      </div>
+      <figure class="hero-tray" aria-label="ถาดขนมวันนี้">
+        <div class="tray-item t1"><span>ขนมชั้น</span></div>
+        <div class="tray-item t2"><span>ขนมตาล</span></div>
+        <div class="tray-item t3"><span>ทองหยิบ</span></div>
+        <div class="tray-item t4"><span>ขนมเปียกปูน</span></div>
+      </figure>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="menu-head">
+        <h2>ขนมวันนี้</h2>
+        <div class="tabs" role="tablist" aria-label="หมวดขนม">
+          <button role="tab" aria-selected="true" data-action="filter_menu" data-filter="all">ทั้งหมด</button>
+          <button role="tab" aria-selected="false" data-action="filter_menu" data-filter="steamed">นึ่ง</button>
+          <button role="tab" aria-selected="false" data-action="filter_menu" data-filter="golden">ทอง ๆ</button>
+        </div>
+      </div>
+      <ul class="menu-list" id="menu-list" aria-live="polite"></ul>
+    </section>
+
+    <section class="story" id="story">
+      <h2>เรื่องของป้า</h2>
+      <p>ป้านวลเริ่มขายขนมจากแผงไม้หน้าบ้านริมคลองบางหลวง ทุกวันนี้ยังกวนเองทุกกระทะ ใช้กะทิคั้นสดและน้ำตาลโตนดจากเพชรบุรี</p>
+    </section>
+
+    <section class="visit" id="visit">
+      <h2>มาหาเรา</h2>
+      <p>ซอยเทอดไท 12 (ข้างวัดอินทาราม) · เดินจาก BTS ตลาดพลู 7 นาที</p>
+      <p>เปิดทุกวัน 06:00–13:00 · หยุดวันพระใหญ่</p>
+    </section>
+  </main>
+
+  <div class="modal" id="preorder-modal" role="dialog" aria-modal="true" aria-labelledby="preorder-title" hidden>
+    <form class="modal-card" data-action="submit_preorder" novalidate>
+      <button type="button" class="modal-close" aria-label="ปิด">×</button>
+      <h2 id="preorder-title">สั่งจองล่วงหน้า</h2>
+      <label for="po-name">ชื่อ</label>
+      <input id="po-name" name="name" required autocomplete="name">
+      <label for="po-phone">เบอร์โทร</label>
+      <input id="po-phone" name="phone" type="tel" inputmode="tel" required autocomplete="tel">
+      <label for="po-date">วันที่มารับ</label>
+      <input id="po-date" name="pickup_date" type="date" required>
+      <label for="po-items">อยากได้อะไรบ้าง</label>
+      <textarea id="po-items" name="items" rows="3" required></textarea>
+      <label class="demo"><input type="checkbox" name="demo_error"> โหมดทดสอบ: จำลองข้อผิดพลาด</label>
+      <button type="submit" class="btn btn-primary">ส่งคำสั่งจอง</button>
+      <p class="form-status" role="status"></p>
+    </form>
+  </div>
+
+  <script src="mock-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

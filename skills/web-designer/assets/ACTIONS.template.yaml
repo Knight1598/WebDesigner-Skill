@@ -1,0 +1,32 @@
+schema: webfactory/actions@1
+design_version: 1
+actions:
+  - action_id: submit_booking
+    kind: backend                  # frontend | navigation | backend | placeholder
+    element: 'ปุ่ม "ยืนยันการจอง" / form#booking-form — web/booking.html'
+    trigger: submit
+    purpose: "ลูกค้าต้องการจองคิวตัดผมในวันและเวลาที่เลือก"
+    input:
+      - { name: service_id, type: string, required: true }
+      - { name: date, type: date, required: true }
+      - { name: time_slot, type: string, required: true }
+      - { name: customer_name, type: string, required: true }
+      - { name: phone, type: tel, required: true }
+    expected_result: "สร้างการจองสถานะ pending, กันช่วงเวลานั้นไม่ให้คนอื่นจอง, แจ้งร้าน"
+    requires_backend: true
+    success_state: "หน้ายืนยันแบบตั๋ว แสดงสรุปบริการ วัน เวลา และเลขอ้างอิง"
+    error_state: "แถบแจ้งเตือนเหนือปุ่ม: ช่วงเวลานี้ถูกจองแล้ว/เครือข่ายขัดข้อง; ข้อผิดพลาดรายช่องแสดงใต้ช่องกรอก"
+    mock: "app.js mockSubmit(), หน่วง 900ms; ดู error ได้ที่ ?demo_error"
+    open_questions:
+      - "ยกเลิกการจองได้ล่วงหน้ากี่ชั่วโมง?"
+
+  - action_id: filter_services_by_category
+    kind: frontend
+    element: "แท็บหมวดบริการ — web/booking.html #service-tabs"
+    trigger: click
+    purpose: "ดูเฉพาะบริการในหมวดที่สนใจ"
+    input: []
+    expected_result: "แสดงเฉพาะบริการในหมวดที่เลือก (กรองในเครื่อง)"
+    requires_backend: false
+    success_state: "รายการเปลี่ยนทันที แท็บที่เลือกมี aria-selected=true"
+    error_state: "ถ้าไม่มีรายการ: empty state พร้อมปุ่มล้างตัวกรอง"

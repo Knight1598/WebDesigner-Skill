@@ -1,0 +1,14 @@
+{
+  "name": "webdesigner",
+  "owner": { "name": "IAHCARUS", "url": "https://github.com/Knight1598" },
+  "description": "WebDesigner — plain-language website idea to original, responsive, approved frontend.",
+  "plugins": [
+    {
+      "name": "webdesigner",
+      "source": "./",
+      "description": "Design-first AI skill that turns a plain-language website idea into an original, responsive, interaction-ready frontend and locks the approved design for backend handoff.",
+      "license": "LicenseRef-WebDesigner-Pending",
+      "keywords": ["web-design", "ui", "ux", "frontend", "thai"]
+    }
+  ]
+}

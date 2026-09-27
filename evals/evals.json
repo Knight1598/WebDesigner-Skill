@@ -1,0 +1,140 @@
+{
+  "skill_name": "web-designer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "saas-landing",
+      "prompt": "ช่วยทำ landing page ให้แอป 'บิลง่าย' หน่อย เป็นโปรแกรมออกใบแจ้งหนี้กับใบกำกับภาษีสำหรับฟรีแลนซ์ไทย มีแพ็กเกจฟรีกับ Pro 149 บาท/เดือน อยากให้คนกดสมัครทดลองใช้ฟรี",
+      "expected_output": "Design direction first; original (non-gradient-hero) landing page in Thai with pricing, working sign-up UI mocked with loading/success/error; responsive; STATE in_review; ACTIONS.yaml.",
+      "files": [],
+      "assertions": [
+        "direction_before_code",
+        "prototype_exists",
+        "checker_clean_core",
+        "responsive_rules",
+        "no_purple_gradient",
+        "backend_boundary",
+        "state_in_review_not_locked",
+        "actions_declared",
+        "error_state_reachable"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "coffee-shop",
+      "prompt": "ร้านกาแฟเล็ก ๆ ชื่อ 'ซอยสาม' อยู่ในซอยอารีย์ 3 คั่วเมล็ดเอง ขายดริปกับขนมโฮมเมด อยากได้เว็บให้คนดูเมนู เวลาเปิด แผนที่ แล้วก็สั่งกาแฟล่วงหน้ามารับได้",
+      "expected_output": "Place-specific direction and signature; menu, hours, location reachable fast on mobile; pre-order flow mocked; Thai-capable fonts with adequate line-height.",
+      "files": [],
+      "assertions": [
+        "direction_before_code",
+        "prototype_exists",
+        "checker_clean_core",
+        "responsive_rules",
+        "no_purple_gradient",
+        "backend_boundary",
+        "state_in_review_not_locked",
+        "actions_declared",
+        "error_state_reachable",
+        "thai_font"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "booking-app",
+      "prompt": "I run a small physio clinic in Chiang Mai with 3 therapists. I need a web app where patients book a 45 or 60 minute session, choose a therapist and pick a time slot. A lot of our patients are older people. Can you make it?",
+      "expected_output": "Multi-step booking flow with visible progress/summary, unavailable slots shown, validation, mocked submit with loading/success/error; large readable type and targets for older users; no real backend.",
+      "files": [],
+      "assertions": [
+        "direction_before_code",
+        "prototype_exists",
+        "checker_clean_core",
+        "responsive_rules",
+        "no_purple_gradient",
+        "backend_boundary",
+        "state_in_review_not_locked",
+        "actions_declared",
+        "error_state_reachable",
+        "direction_all_nine"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "admin-dashboard-with-db-request",
+      "prompt": "ทำหน้า admin dashboard ให้ทีมแอดมินร้านขายต้นไม้ออนไลน์ ดูออเดอร์วันนี้ ค้นหาออเดอร์ กรองตามสถานะ (รอชำระ/รอแพ็ค/ส่งแล้ว/ยกเลิก) แล้วกดเปลี่ยนสถานะได้ ต่อ database ด้วยนะ",
+      "expected_output": "Attention-first dashboard (not a card wall), working local search/filter over mock data, status change mocked; declines to build the database and records it as backend-required in ACTIONS.yaml, explaining this in plain Thai.",
+      "files": [],
+      "assertions": [
+        "direction_before_code",
+        "prototype_exists",
+        "checker_clean_core",
+        "responsive_rules",
+        "no_purple_gradient",
+        "backend_boundary",
+        "no_database_created",
+        "db_request_explained",
+        "state_in_review_not_locked",
+        "actions_declared"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "ecommerce-product",
+      "prompt": "product page for our handmade leather backpack 'Nomad 22L'. 3 colours (tan, black, olive), 4,290 THB. should feel premium but not snobby-luxury. most shoppers come from our instagram on their phones.",
+      "expected_output": "Mobile-first product page with variant selection state, sticky price/add-to-cart on mobile, mocked cart feedback, delivery/returns info, placeholder-labelled reviews.",
+      "files": [],
+      "assertions": [
+        "direction_before_code",
+        "prototype_exists",
+        "checker_clean_core",
+        "responsive_rules",
+        "no_purple_gradient",
+        "backend_boundary",
+        "state_in_review_not_locked",
+        "actions_declared"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "lock-on-clear-approval",
+      "prompt": "[Context: you built the prototype in this project for the user in an earlier turn and asked for feedback.] User now says: โอเค ผ่าน ใช้แบบนี้เลย",
+      "expected_output": "Locks the design: STATE approved/locked with approval quote; DESIGN.md + complete ACTIONS.yaml pass --handoff; fixes the modal close button's missing data-action without visual change; styles.css untouched.",
+      "files": [
+        "evals/fixtures/baan-khanom"
+      ],
+      "assertions": [
+        "handoff_valid",
+        "state_approved_locked",
+        "styles_unchanged",
+        "markup_nonvisual_only"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "no-lock-on-mixed-approval",
+      "prompt": "[Context: you built the prototype in this project for the user in an earlier turn and asked for feedback.] User now says: โอเค แต่ปุ่มสั่งจองใหญ่ขึ้นอีกหน่อยนะ",
+      "expected_output": "Enlarges only the pre-order button; does NOT lock; asks the user to confirm approval explicitly.",
+      "files": [
+        "evals/fixtures/baan-khanom"
+      ],
+      "assertions": [
+        "not_locked",
+        "css_change_scoped_to_button",
+        "asks_to_confirm_lock"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "scoped-vague-feedback",
+      "prompt": "[Context: you built the prototype in this project for the user in an earlier turn and asked for feedback.] User now says: ส่วนเรื่องของป้ายังดูโล่ง ๆ ไม่มีอะไรเลย",
+      "expected_output": "Improves only the story section (#story); hero, menu, visit, tokens untouched; not locked; explains the change in one or two lines.",
+      "files": [
+        "evals/fixtures/baan-khanom"
+      ],
+      "assertions": [
+        "not_locked",
+        "change_scoped_to_story",
+        "tokens_unchanged"
+      ]
+    }
+  ]
+}
